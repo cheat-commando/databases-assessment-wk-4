@@ -1,6 +1,5 @@
 log_file = open("um-server-01.txt") # This opens the text file and saves it to a variable called 'log_file'
 
-
 def sales_reports(log_file): # This is the declaration of a function called sales_reports that takes in a single parameter (also called log_file, but that's okay)
     for line in log_file: # This is a for loop that will read every line of whatever argument is passed into the function. Every separate line of the argument will now be known as 'line'
         line = line.rstrip() # This will remove any trailing blank characters on the right side of this string (which is 'line') and then it will reassign 'line' to be the cleaned up version.
@@ -10,3 +9,14 @@ def sales_reports(log_file): # This is the declaration of a function called sale
 
 
 sales_reports(log_file) # This runs the above function, passing in the file that was opened in line 1.
+
+# In process.py, write another function that prints out all the melon orders that delivered over 10 melons.
+
+def more_than_10_melons(monkey):
+    for line in monkey:
+        line = line.strip().split(' ')
+        if int(line[2]) > 10:
+            print(' '.join(line))
+
+
+more_than_10_melons(log_file)
