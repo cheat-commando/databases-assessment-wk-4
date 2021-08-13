@@ -1,4 +1,4 @@
-log_file = open("um-server-01.txt") # This opens the text file and saves it to a variable called 'log_file'
+log_file = open("um-server-01.txt").readlines() # This opens the text file and saves it to a variable called 'log_file'
 
 def sales_reports(log_file): # This is the declaration of a function called sales_reports that takes in a single parameter (also called log_file, but that's okay)
     for line in log_file: # This is a for loop that will read every line of whatever argument is passed into the function. Every separate line of the argument will now be known as 'line'
